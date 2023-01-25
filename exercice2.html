@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loading">
+        <center>
+            <div  align="center"class="loader"></div>
+        </center>
+        <div class="load">Loading<a id="changeText"></a></div>
+        <div class="load-A">
+            <a class="l">L</a>
+            <a class="o">O</a>
+            <a class="a">A</a>
+            <a class="d">D</a>
+            <a class="i">I</a>
+            <a class="n">N</a>
+            <a class="g">G</a>
+        </div>
+    </div>
+    <script>
+        var text = ["", ".", "..", "..."];
+        var counter = 0;
+        var elem = document.getElementById("changeText");
+        setInterval(change, 300);
+        function change() {
+            elem.innerHTML = text[counter];
+            counter++;
+            if (counter >= text.length) { counter = 0; }
+        }
+    </script>
+</body>
+
+</html>

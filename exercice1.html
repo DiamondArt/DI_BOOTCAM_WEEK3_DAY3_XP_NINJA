@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 : Box Animation</title>
+    <style>
+        @keyframes expandBox {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1.0);
+                opacity: 1;
+            }
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+            gap: .4em;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 0;
+            cursor: pointer;
+            animation: expandBox .5s ease-in-out;
+        }
+
+        .add-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28pt;
+            background-color: rgb(43, 113, 226);
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <button class="box add-box" type="button">+</button>
+    </div>
+    <script src="./exercice1.js"></script>
+
+</body>
+</html>
